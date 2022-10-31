@@ -4,6 +4,9 @@
              xmlns:view="clr-namespace:MauiImageSteps.ViewModels"
              x:Class="MauiImageSteps.MainPage">
 
+    <ContentPage.BindingContext>
+        <view:PikachusViewModel />
+    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"

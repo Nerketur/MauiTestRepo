@@ -9,20 +9,15 @@ namespace MauiImageSteps;
 
 public partial class MainPage : ContentPage
 {
-    private PikachuService service;
-    private PikachusViewModel viewModel;
+    private readonly PikachuService service;
 
-    public MainPage(PikachuService pika, PikachusViewModel pvm) {
-        this.service = pika;
-        BindingContext = pvm;
-        viewModel = pvm;
+    public MainPage(PikachuService pika) {
         InitializeComponent();
+        service = pika;
     }
     protected async override void OnAppearing() {
         base.OnAppearing();
-        viewModel.Pikachus = await service.GetPikachusAsync();
-
-        //vm.LoadData(); 
+        ((PikachusViewModel)BindingContext).Pikachus = await service.GetPikachusAsync();
     }
 }
 

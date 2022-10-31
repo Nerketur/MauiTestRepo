@@ -17,7 +17,6 @@ public static class MauiProgram
 			});
 
         builder.Services.AddSingleton<PikachuService>();
-		builder.Services.AddSingleton<PikachusViewModel>();
         builder.Services.AddSingleton<MainPage>();
 
         return builder.Build();
