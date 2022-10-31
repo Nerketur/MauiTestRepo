@@ -1,5 +1,4 @@
-﻿using MauiImageSteps.Model;
-using MauiImageSteps.Service;
+﻿using MauiImageSteps.Service;
 using MauiImageSteps.ViewModels;
 
 namespace MauiImageSteps;
@@ -14,7 +13,7 @@ public partial class MainPage : ContentPage
     }
     protected async override void OnAppearing() {
         base.OnAppearing();
-        ((PikachusViewModel)BindingContext).Pikachus = await service.GetPikachusAsync();
+        ((PikachusViewModel)BindingContext).PikachuList = await service.GetPikachusAsync();
     }
 }
 

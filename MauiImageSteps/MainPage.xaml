@@ -13,7 +13,7 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <CarouselView ItemsSource="{Binding Pikachus}">
+            <CarouselView ItemsSource="{Binding PikachuList}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>

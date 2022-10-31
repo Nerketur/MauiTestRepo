@@ -1,4 +1,4 @@
-
+﻿
 namespace MauiImageSteps.Model {
     public class Pikachu {
         public string Name { get; set; }

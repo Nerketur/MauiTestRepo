@@ -1,56 +1,18 @@
+﻿using Lombok.NET;
 
-namespace MauiImageSteps.ViewModels
-{
+namespace MauiImageSteps.ViewModels {
 
-    public class PikachuViewModel : INotifyPropertyChanged {
+    [NotifyPropertyChanged]
+    public partial class PikachuViewModel {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        [Property(PropertyChangeType.PropertyChanged)]
         public string name;
+        [Property(PropertyChangeType.PropertyChanged)]
         public string loc;
+        [Property(PropertyChangeType.PropertyChanged)]
         public string details;
+        [Property(PropertyChangeType.PropertyChanged)]
         public string imgUrl;
-
-        public string Name {
-            get {
-                return name;
-            }
-            set {
-                if (name != value) {
-                    name = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
-                }
-            }
-        }
-
-        public string Location {
-            get { return loc; }
-            set {
-                if (loc != value) {
-                    loc = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Location)));
-                }
-            }
-        }
-
-        public string Details {
-            get { return details; }
-            set {
-                if (details != value) {
-                    details = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Details)));
-                }
-            }
-        }
-        public string ImageUrl {
-            get { return imgUrl; }
-            set {
-                if (imgUrl != value) {
-                    imgUrl = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ImageUrl)));
-                }
-            }
-        }
 
         public PikachuViewModel() {
         }
